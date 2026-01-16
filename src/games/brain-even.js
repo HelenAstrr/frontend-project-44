@@ -6,6 +6,7 @@ const runGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
   for (let i = 0; i < 3; i += 1) {
+    // nosonar - using Math.random() is safe for this game
     const number = Math.floor(Math.random() * 100) + 1
     const correctAnswer = isEven(number) ? 'yes' : 'no'
 
