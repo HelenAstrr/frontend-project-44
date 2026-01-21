@@ -1,6 +1,5 @@
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+import getRandomNumber from '../utils/random.js'
 
-// Функция для нахождения НОД (алгоритм Евклида)
 const gcd = (a, b) => {
   if (b === 0) {
     return Math.abs(a)

@@ -1,6 +1,5 @@
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+import getRandomNumber from '../utils/random.js'
 
-// Создает арифметическую прогрессию
 const generateProgression = (start, step, length) => {
   const progression = []
   for (let i = 0; i < length; i += 1) {
@@ -10,7 +9,7 @@ const generateProgression = (start, step, length) => {
 }
 
 const generateRound = () => {
-  const progressionLength = getRandomNumber(5, 10) // Длина 5-10 чисел
+  const progressionLength = getRandomNumber(5, 10)
   const start = getRandomNumber(1, 20)
   const step = getRandomNumber(1, 10)
   const hiddenIndex = getRandomNumber(0, progressionLength - 1)
@@ -18,7 +17,6 @@ const generateRound = () => {
   const progression = generateProgression(start, step, progressionLength)
   const correctAnswer = String(progression[hiddenIndex])
   
-  // Создаем строку с двумя точками вместо скрытого числа
   progression[hiddenIndex] = '..'
   const question = progression.join(' ')
   
