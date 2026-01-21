@@ -1,6 +1,6 @@
 import getRandomNumber from '../utils/random.js'
 
-const isEven = (num) => num % 2 === 0
+const isEven = num => num % 2 === 0
 
 const generateRound = () => {
   const number = getRandomNumber(1, 100)
