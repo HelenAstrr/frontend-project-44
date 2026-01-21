@@ -18,10 +18,10 @@ const generateRound = () => {
   const num2 = getRandomNumber(1, 25)
   const operators = ['+', '-', '*']
   const operator = operators[getRandomNumber(0, operators.length - 1)]
-  
+
   const question = `${num1} ${operator} ${num2}`
   const answer = String(calculate(num1, num2, operator))
-  
+
   return [question, answer]
 }
 
